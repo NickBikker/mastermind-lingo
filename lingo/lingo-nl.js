@@ -482,6 +482,9 @@ var words = [
 var random = words[Math.floor(Math.random() * words.length)];
 var counter = 2;
 var playerarray;
+var woordcopy = [];
+var gok = '';
+var kleuren = ['red','red','red','red','red'];
 
 
 
@@ -533,8 +536,45 @@ function check() {
     document.getElementsByTagName('div')[i+counter].innerHTML = playerarray[i];
 
     }
-    counter +=5
+	veranderkleuren();
 }
 
 checkbutton.onclick = check;
 
+function veranderkleuren(){
+	kleuren = ['red', 'red','red','red','red'];
+	woordcopy = random.split('');
+	gok = Array.from(document.getElementById('playerinput').value);
+	woordcopy = Array.from(random);
+	for(i = 0; i<5;i++){
+		if(gok[i] == woordcopy[i]){
+			kleuren[i] = 'green';
+			gok[i] = null;
+			woordcopy[i] = null;
+		}
+	}
+	for(i = 0;i<5;i++){
+		if(gok[i] != null){
+			if(woordcopy.indexOf(gok[i]) > -1){
+				kleuren[i] = 'yellow';
+				woordcopy[woordcopy.indexOf(gok[i])] = null;
+				gok[i] = null;
+			}
+		}
+	}
+	console.log(kleuren);
+	kleurbox();
+}
+
+function kleurbox(){
+	for(var i = 0; i<5;i++){
+        document.getElementsByTagName('div')[i+counter].style.backgroundColor = kleuren[i];
+	}
+    counter +=5;
+	firstletter()
+}
+
+function firstletter(){
+    document.getElementsByTagName('div')[counter].innerHTML = random[0];
+}
+console.log(random);
