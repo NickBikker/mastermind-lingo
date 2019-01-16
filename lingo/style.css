@@ -2,6 +2,8 @@ body{
      margin: 0;
      padding: 0;
      line-height: 0;
+     background: url("img/brother.jpg") no-repeat;
+     background-size: cover;
 
  }
 
@@ -10,7 +12,10 @@ body{
     width: 1000px;
     height: 500px;
     margin: 0 auto;
-    border: solid black 1px;
+    border: solid transparent 1px;
+    background-color: transparent;
+
+
 }
 
 .letterbox{
@@ -45,8 +50,11 @@ body{
     position: absolute;
     float: left;
     top: 20px;
-    left: 450px;
+    left: 310px;
     font-size: 40px;
+    font-family: 'PT Sans Caption', sans-serif;
+    color: deepskyblue;
+
 }
 
 #playerinput{

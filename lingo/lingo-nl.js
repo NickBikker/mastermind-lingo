@@ -485,8 +485,7 @@ var playerarray;
 var woordcopy = [];
 var gok = '';
 var kleuren = ['red','red','red','red','red'];
-
-
+var levens = 0;
 
 
 var container = document.createElement('div');
@@ -494,7 +493,7 @@ container.classList.add('container');
 document.body.appendChild(container);
 
 var text = document.createElement('p');
-var textvalue = document.createTextNode('Lingo');
+var textvalue = document.createTextNode('Lingo with Brøther');
 text.setAttribute('id', 'title');
 text.appendChild(textvalue);
 container.appendChild(text);
@@ -534,8 +533,8 @@ function check() {
     playerarray = Array.from(playerinput.value);
     for (var i = 0; i < 5; i++) {
     document.getElementsByTagName('div')[i+counter].innerHTML = playerarray[i];
-
     }
+    levens += 1;
 	veranderkleuren();
 }
 
@@ -576,5 +575,10 @@ function kleurbox(){
 
 function firstletter(){
     document.getElementsByTagName('div')[counter].innerHTML = random[0];
+    if(kleuren[0]=== 'green' && kleuren[1]=== 'green' && kleuren[2]=== 'green' && kleuren[3]=== 'green' && kleuren[4] === 'green'){
+    	alert('you won!')
+	}else if(levens === 5){
+    	alert('Game over')
+	}
 }
 console.log(random);
