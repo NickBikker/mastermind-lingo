@@ -1,0 +1,48 @@
+body{
+     margin: 0;
+     padding: 0;
+     line-height: 0;
+
+ }
+
+.container{
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    border: solid black 1px;
+}
+
+.letterbox{
+    height: 50px;
+    width: 50px;
+    border: solid black 1px;
+    display: inline-block;
+    margin: 3px;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+.checkbutton{
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 470px;
+}
+
+.lettercontainer{
+    margin-top: 150px;
+    margin-left: 335px;
+    width: 290px;
+    height: 300px;
+}
+
+#title{
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#playerinput{
+    position: absolute;
+    margin-left: 335px;
+    margin-top: 110px;
+}

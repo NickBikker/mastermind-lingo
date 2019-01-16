@@ -1,0 +1,12 @@
+.container{
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    border: solid black 1px;
+}
+
+p{
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
