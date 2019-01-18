@@ -574,11 +574,25 @@ function kleurbox(){
 }
 
 function firstletter(){
-    document.getElementsByTagName('div')[counter].innerHTML = random[0];
-    if(kleuren[0]=== 'green' && kleuren[1]=== 'green' && kleuren[2]=== 'green' && kleuren[3]=== 'green' && kleuren[4] === 'green'){
-    	alert('you won!')
-	}else if(levens === 5){
-    	alert('Game over')
-	}
+	if(levens < 5){
+        document.getElementsByTagName('div')[counter].innerHTML = random[0];
+    }
+	win();
 }
+
+function win(){
+    if(kleuren[0]=== 'green' && kleuren[1]=== 'green' && kleuren[2]=== 'green' && kleuren[3]=== 'green' && kleuren[4] === 'green'){
+        alert('you won!')
+    }else if(levens === 5){
+        alert('Game over')
+    }
+}
+
 console.log(random);
+playerinput.addEventListener('keypress', CheckEnter);
+
+function CheckEnter(e) {
+    if(e.key === 'enter') {
+        check;
+    }
+}
